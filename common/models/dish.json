@@ -1,0 +1,78 @@
+{
+  "name": "Dish",
+  "base": "Model",
+  "idInjection": true,
+  "properties": {
+    "active": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "src": {
+      "externalId": "string",
+      "name": "string"
+    },
+    "section": "string",
+    "price": {
+      "type": "number"
+    },
+    "instructions": {
+      "type": "string"
+    },
+    "ingredients": {
+      "type": [
+        "string"
+      ]
+    },
+    "sizes": [{
+      "id": "string",
+      "name": "string",
+      "price": "number",
+      "selected": {
+        "type": "boolean",
+        "default": false
+      }
+    }],
+    "options": [{
+      "id": "string",
+      "name": "string",
+      "minSelection": "string",
+      "maxSelection": "string",
+      "selected": {
+        "type": "boolean",
+        "default": false
+      },
+      "choices": [{
+        "id": "string",
+        "name": "string",
+        "price": "number",
+        "selected": {
+          "type": "boolean",
+          "default": false
+        }
+      }]
+    }],
+    "deleted": {
+      "type": "boolean",
+      "default": false
+    },
+    "updatedAt": {
+      "type": "date",
+      "required": true,
+      "default": "$now"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "dish": {
+      "type": "belongsTo",
+      "model": "Dish"
+    }
+  },
+  "acls": [],
+  "methods": []
+}

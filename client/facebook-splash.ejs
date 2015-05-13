@@ -1,0 +1,6 @@
+<script>
+	window.onunload = function () {
+		opener.postLogin('<%= accessToken %>', '<%= userId %>');
+	}
+	window.close();
+</script>

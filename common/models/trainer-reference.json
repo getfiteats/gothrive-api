@@ -1,0 +1,18 @@
+{
+  "name": "TrainerReference",
+  "base": "Model",
+  "properties": {
+    "quote": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "trainer": {
+      "type": "belongsTo",
+      "model": "Trainer"
+    }
+  },
+  "acls": [],
+  "methods": []
+}

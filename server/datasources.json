@@ -1,0 +1,16 @@
+{
+  "mongodb": {
+    "database": "gothrive",
+    "name": "mongodb",
+    "connector": "mongodb",
+    "allowExtendedOperators": true
+  },
+  "GooglePlaces": {
+    "name": "GooglePlaces",
+    "connector": "rest"
+  },
+  "Delivery": {
+    "name": "Delivery",
+    "connector": "rest"
+  }
+}

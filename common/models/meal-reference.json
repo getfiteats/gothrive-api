@@ -1,0 +1,24 @@
+{
+  "name": "MealReference",
+  "base": "Model",
+  "idInjection": false,
+  "properties": {
+    "quantity": {
+      "type": "number",
+      "default": 1
+    },
+    "mealId": {
+      "type": "objectid",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "meal": {
+      "type": "belongsTo",
+      "model": "Meal"
+    }
+  },
+  "acls": [],
+  "methods": []
+}

@@ -1,0 +1,87 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models",
+      "./node_modules/loopback-component-passport/lib/models"
+    ]
+  },
+  "ACL": {
+    "dataSource": "mongodb",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "mongodb",
+    "public": false
+  },
+  "Role": {
+    "dataSource": "mongodb",
+    "public": false
+  },
+  "user": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "accessToken": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "userCredential": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "userIdentity": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Brand": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Meal": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "NutritionTag": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "NutritionTagReference": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Dish": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Trainer": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "TrainerReference": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "GooglePlace": {
+    "dataSource": "GooglePlaces",
+    "public": true
+  },
+  "Delivery": {
+    "dataSource": "Delivery",
+    "public": true
+  },
+  "Cart": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "MealReference": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Order": {
+    "dataSource": "mongodb",
+    "public": true
+  }
+}

@@ -1,0 +1,103 @@
+module.exports = {
+  'local': {
+    'provider': 'local',
+    'module': 'passport-local',
+    'usernameField': 'username',
+    'passwordField': 'password',
+    'authPath': '/auth/local',
+    'successRedirect': '/auth/account',
+    'failureRedirect': '/local',
+    'failureFlash': true
+  },
+  'cms-facebook-login': {
+    'provider': 'facebook',
+    'module': 'passport-facebook',
+    'clientID': process.env.FACEBOOK_CLIENT_ID,
+    'clientSecret': process.env.FACEBOOK_CLIENT_SECRET,
+    'callbackURL': '/auth/facebook-cms/callback',
+    'authPath': '/auth/facebook-cms',
+    'callbackPath': '/auth/facebook-cms/callback',
+    'successRedirect': process.env.CMS_URI + '/#/auth/callback',
+    'failureRedirect': process.env.CMS_URI + '/#/login',
+    'scope': ['email'],
+    'failureFlash': true
+  },
+  'mobile-facebook-login': {
+    'provider': 'facebook',
+    'module': 'passport-facebook',
+    'clientID': process.env.FACEBOOK_CLIENT_ID,
+    'clientSecret': process.env.FACEBOOK_CLIENT_SECRET,
+    'callbackURL': '/auth/facebook-mobile/callback',
+    'authPath': '/auth/facebook-mobile',
+    'callbackPath': '/auth/facebook-mobile/callback',
+    'successRedirect': process.env.MOBILE_URI + '/#/auth/callback',
+    'failureRedirect': process.env.MOBILE_URI + '/#/login',
+    'scope': ['email'],
+    'failureFlash': true
+  },
+  'splash-facebook-login': {
+    'provider': 'facebook',
+    'module': 'passport-facebook',
+    'clientID': process.env.FACEBOOK_CLIENT_ID,
+    'clientSecret': process.env.FACEBOOK_CLIENT_SECRET,
+    'callbackURL': '/auth/facebook-splash/callback',
+    'authPath': '/auth/facebook-splash',
+    'callbackPath': '/auth/facebook-splash/callback',
+    'successRedirect': process.env.SPLASH_URI + '/facebook-splash.html',
+    'failureRedirect': process.env.SPLASH_URI + '/facebook-splash.html',
+    'scope': ['email'],
+    'failureFlash': true
+  },
+  'splash-mobile-facebook-login': {
+    'provider': 'facebook',
+    'module': 'passport-facebook',
+    'clientID': process.env.FACEBOOK_CLIENT_ID,
+    'clientSecret': process.env.FACEBOOK_CLIENT_SECRET,
+    'callbackURL': '/auth/facebook-splash-mobile/callback',
+    'authPath': '/auth/facebook-splash-mobile',
+    'callbackPath': '/auth/facebook-splash-mobile/callback',
+    'successRedirect': process.env.MOBILE_SPLASH_URI,
+    'failureRedirect': process.env.MOBILE_SPLASH_URI,
+    'scope': ['email'],
+    'failureFlash': true
+  },
+  'splash-facebook2-login': {
+    'provider': 'facebook',
+    'module': 'passport-facebook',
+    'clientID': process.env.FACEBOOK_CLIENT_ID,
+    'clientSecret': process.env.FACEBOOK_CLIENT_SECRET,
+    'callbackURL': '/auth/facebook-splash2/callback',
+    'authPath': '/auth/facebook-splash2',
+    'callbackPath': '/auth/facebook-splash2/callback',
+    'successRedirect': process.env.SPLASH_URI + '/facebook-splash.html',
+    'failureRedirect': process.env.SPLASH_URI + '/facebook-splash.html',
+    'scope': ['email'],
+    'failureFlash': true
+  },
+  'splash-mobile-facebook2-login': {
+    'provider': 'facebook',
+    'module': 'passport-facebook',
+    'clientID': process.env.FACEBOOK_CLIENT_ID,
+    'clientSecret': process.env.FACEBOOK_CLIENT_SECRET,
+    'callbackURL': '/auth/facebook-splash-mobile2/callback',
+    'authPath': '/auth/facebook-splash-mobile2',
+    'callbackPath': '/auth/facebook-splash-mobile2/callback',
+    'successRedirect': process.env.MOBILE_SPLASH_URI + '/index4.html',
+    'failureRedirect': process.env.MOBILE_SPLASH_URI + '/index4.html',
+    'scope': ['email'],
+    'failureFlash': true
+  },
+  'mobile-home-facebook-login': {
+    'provider': 'facebook',
+    'module': 'passport-facebook',
+    'clientID': process.env.FACEBOOK_CLIENT_ID,
+    'clientSecret': process.env.FACEBOOK_CLIENT_SECRET,
+    'callbackURL': '/auth/facebook-mobile-home/callback',
+    'authPath': '/auth/facebook-mobile-home',
+    'callbackPath': '/auth/facebook-mobile-home/callback',
+    'successRedirect': process.env.MOBILE_URI + '/#/auth/callback',
+    'failureRedirect': process.env.MOBILE_HOME_URI,
+    'scope': ['email'],
+    'failureFlash': true
+  }
+};

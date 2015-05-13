@@ -1,0 +1,14 @@
+{
+  "name": "NutritionTagReference",
+  "base": "Model",
+  "properties": {},
+  "validations": [],
+  "relations": {
+    "nutritionTag": {
+      "type": "belongsTo",
+      "model": "NutritionTag"
+    }
+  },
+  "acls": [],
+  "methods": []
+}

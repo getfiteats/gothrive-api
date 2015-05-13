@@ -1,0 +1,38 @@
+<div class="common order">
+  <div class="heading">Order Summary</div>
+  <ul>
+    <li class="meal" ng-repeat="(index, mealReference) in ::order.mealReferences">
+      <div class="row dish-row">
+        <div class="col-25 dish-col">
+          <!--<img class="order-thumb" src="{{mealReference.meal.image.url|cloudinaryCrop: 'c_fit':'80':''}}">-->
+        </div>
+
+        <div class="col-50 dish-title-container dish-col">
+          <div class="dish-title">{{::mealReference.meal.name}}</div>
+          <p>{{::mealReference.meal.brand.name}}</p>
+        </div>
+
+        <div class="dish-col col-10">
+          <!--<input end-line ng-blur="$parent.onQuantityChange && $parent.onQuantityChange(mealReference)" type="text" class='quantity' pattern="[0-9]*" ng-model="mealReference.quantity">-->
+        </div>
+      </div>
+      <div class="dish-price">${{::mealReference.meal.expertPrice}}</div>
+    </li>
+  </ul>
+  <div class='price-container row'>
+    <span class="col-25">Subtotal</span>
+    <span class="price col-25">${{::order.cost.subTotal}}</span>
+  </div>
+  <div class='price-container row'>
+    <span class="col-25">Tip</span>
+    <span class="price col-25">${{::order.cost.tip}}</span>
+  </div>
+  <div class='price-container row'>
+    <span class="col-25">Tax</span>
+    <span class="price col-25">${{::order.cost.tax}}</span>
+  </div>
+  <div class='total-container row'>
+    <span class="col-25">Total</span>
+    <span class="total col-25">${{::order.cost.total}}</span>
+  </div>
+</div>

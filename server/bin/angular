@@ -1,0 +1,5 @@
+URL=http://api.getgothrive.com/api
+if [[ $1 = "local" ]]; then
+	URL="http://127.0.0.1:3000/api"
+fi 
+lb-ng server/server.js gothriveServices.js -m gothrive.api -u $URL
